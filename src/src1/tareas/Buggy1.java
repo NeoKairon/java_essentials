@@ -14,10 +14,14 @@ public class Buggy1 {
 	    int n;
 	    do
 	    {
-	        Input.print("n is ");
+	        Input.print("Input a negative number: \n");
 	        n = Input.get_int();
+	        if(n > 0)
+	        	Input.print("The number is positive, try again \n");
+	        else if (n==0)
+	        	Input.print("The number is zero, try again \n");
 	    }
-	    while (n > 0);
+	    while (n >= 0);
 	    return n;
 	}
 }
