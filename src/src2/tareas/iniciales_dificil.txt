@@ -1,6 +1,8 @@
-Implemente un programa que, dado el nombre de una persona, imprima las iniciales de la personas, como se muestra abajo.
+Implemente un programa que, dado el nombre de una persona, imprima las iniciales de la personas, 
+como se muestra abajo.
 
-Tome en cuenta que la persona podria introducir palabras con iniciales en minuscular, o espacios extra entre palabras, como se muestra abajo.
+Tome en cuenta que la persona podria introducir palabras con iniciales en minuscular, 
+o espacios extra entre palabras, como se muestra abajo.
 
 $ ./iniciales_dificil
 regulus Arcturus black
@@ -12,3 +14,9 @@ $ ./iniciales_dificil
      1.  perfeccionen el algoritmo para hacer split y utilicen trim() 
      
         
+Planeacion
+
+Obtener string
+Revisar string y hacer un arreglo de strings usando splits
+Revisar cada string del arreglo y tomar el primer caracter alfabético para transformarlo en mayúscula
+Imprimir el caracter
