@@ -28,7 +28,36 @@ public class horaDificil2v2 {
 		String[] separacion = verifyLenght();
 		int[] transTipos = transformTypes(separacion);
 		verifyDigits(transTipos);
+		printHour(transTipos);
 		
+	}
+
+	private static void printHour(int[] transTipos) {
+		int hr = transTipos[0];
+		int mn = transTipos[1];
+		int sg = transTipos[2];
+		
+		verifyPrintHour(hr);
+		
+		Input.print(mn + " minutos y " + sg + " segundos.");
+	}
+
+	private static void verifyPrintHour(int hr) {
+		
+		if (hr == 0 || hr >= 13 || hr <=23) {
+			hr = hr - 12;
+			Math.abs(hr);
+			if (hr == 1) 
+				Input.print("Es la " + hr + " PM con ");
+			else 
+				Input.print("Son las " + hr + " PM con ");				
+		}
+		else {
+			if (hr == 1)
+				Input.print("Es la " + hr + " AM con ");
+			else 
+				Input.print("Son las " + hr + " PM con ");
+		}
 	}
 
 	private static String[] verifyLenght() {
