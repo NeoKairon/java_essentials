@@ -20,21 +20,25 @@ public class FirstSeleniumChrome {
     	//Inicializa el driver y se abre el navegador
         WebDriver driver = new ChromeDriver(opts);
 
-
-        String expectedTitle = "Welcome: Mercury Tours";
+        //Al string expectedTitle se le asigna el titulo a buscar
+        String expectedTitle = "Google";
+        //Navega hacia la página que Google
         driver.get("http://google.com");
+        //Se trae el título del sitio y se asigna a la variable de ActualTitle
         String actualTitle = driver.getTitle();
+        //Se compara si expected es igual a actual para pasar o fallar el caso de prueba
         if (actualTitle.contentEquals(expectedTitle)){
             System.out.println("Test Passed!");
         } else {
             System.out.println("Test Failed");
         }
+        //Siempre hay que terminar el driver que se esta usando (matarlo)
         driver.close();
+        //Cierra el navegador
         driver.quit();
     }
 
-	private static FirefoxProfile getProfile(String profileName) {
-		return new ProfilesIni().getProfile(profileName);
+	
 	}
-}
+
 
