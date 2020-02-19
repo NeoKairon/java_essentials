@@ -32,14 +32,30 @@ public class Automovil {
 	//comportamiento
 	public void acelerar() {
 		Input.print("run run\n");
+		velocidadActual = velocidadActual + 5;
+	}
+	
+	public void acelerar (int segs) {
+		Input.print("Run & furious!");
+		velocidadActual = velocidadActual + (5*segs);
 	}
 	
 	public void frenar() {
 		Input.print("Screeeeech!\n");
+		velocidadActual = velocidadActual - 5;
+	}
+	
+	public void frenar(int segs) {
+		Input.print("Se atraviesa una viejita!!!");
+		velocidadActual =  velocidadActual - (5*segs);
 	}
 	
 	public void retroceder() {
 		Input.print("piii piii piii piii\n");
+		if (velocidadActual <= 0) 
+			velocidadActual = velocidadActual - 3;
+		else 
+			Input.print("Nel hasta que pares.");			
 	}
 	
 	public double getVelocidad() {
